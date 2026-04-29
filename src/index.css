@@ -1,34 +1,43 @@
 @import "tailwindcss";
 
 @theme {
-  /* Backgrounds */
-  --color-bg: #0a0d0e;
-  --color-bg-1: #0f1416;
-  --color-bg-2: #161c1f;
-  --color-bg-3: #1d2528;
+  /* ===== BACKGROUNDS ===== */
+  /* Layered from darkest to lightest — pick by depth, not preference */
+  --color-bg: #0a0d0e; /* Page background — the base everything sits on */
+  --color-bg-1: #0f1416; /* Raised panels — top bar, cards, main content blocks */
+  --color-bg-2: #161c1f; /* Card headers, inset blocks, table headers */
+  --color-bg-3: #1d2528; /* Hover states, active pill backgrounds, selected rows */
 
-  /* Lines */
-  --color-line: #232c30;
-  --color-line-bright: #2f3a3f;
+  /* ===== LINES (borders/dividers) ===== */
+  /* Always 1px — never use border-radius */
+  --color-line: #232c30; /* Default borders on cards, panels, dividers between sections */
+  --color-line-bright: #2f3a3f; /* Hover/focus borders, emphasised dividers, active card outlines */
 
-  /* Ink (text) */
-  --color-ink: #d8e2e6;
-  --color-ink-dim: #8a9a9f;
-  --color-ink-faint: #4a5559;
+  /* ===== INK (text) ===== */
+  /* Three levels of importance — descending visibility */
+  --color-ink: #d8e2e6; /* Primary text — body copy, headlines, main content */
+  --color-ink-dim: #8a9a9f; /* Secondary text — descriptions, subtitles, inactive nav links */
+  --color-ink-faint: #4a5559; /* Tertiary text — labels, timestamps, metadata, "FULL-STACK / SYSTEM #00471" style captions */
 
-  /* Accents */
-  --color-accent: #c4f04b;
-  --color-accent-2: #4bf0c4;
+  /* ===== ACCENTS ===== */
+  /* Use sparingly — these are signal colours, not decoration */
+  --color-accent: #c4f04b; /* Electric lime — primary CTA, active nav, "LIVE" pills, key links, hero highlight words */
+  --color-accent-2: #4bf0c4; /* Mint — success states, confirmations, secondary highlights (pair with accent for variety) */
 
-  /* Status */
-  --color-warn: #f0a04b;
-  --color-crit: #f04b6e;
-  --color-info: #6ec4f0;
-  --color-debug: #a285f0;
+  /* ===== STATUS COLOURS ===== */
+  /* Semantic — only use when communicating system state, never decorative */
+  --color-warn: #f0a04b; /* Orange — warnings, slow queries, degraded performance, attention-needed */
+  --color-crit: #f04b6e; /* Red — errors, failures, 4xx/5xx statuses, destructive actions */
+  --color-info: #6ec4f0; /* Blue — info-level logs, neutral data points, helpful context */
+  --color-debug: #a285f0; /* Purple — debug-level logs, dev-only indicators, trace data */
 
-  /* Fonts */
-  --font-serif: "Fraunces", Georgia, serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  /* ===== FONTS ===== */
+  --font-serif:
+    "Fraunces", Georgia, serif; /* Headlines, page titles, big metric numbers — use italics for emphasis words */
+  --font-mono:
+    "JetBrains Mono", ui-monospace, monospace; /* Everything else — body, nav, labels, log rows, code, buttons */
+
+  --animate-ping-ring: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 /* Base page styling */
@@ -93,5 +102,16 @@
   h5,
   h6 {
     font-family: var(--font-serif);
+  }
+
+  @keyframes ping-ring {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
   }
 }
