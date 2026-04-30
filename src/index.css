@@ -37,7 +37,10 @@
   --font-mono:
     "JetBrains Mono", ui-monospace, monospace; /* Everything else — body, nav, labels, log rows, code, buttons */
 
+  /* ===== ANIMATIONS ===== */
   --animate-ping-ring: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+  --breakpoint-nav: 1180px; /* Where we switch from full nav to hamburger menu */
 }
 
 /* Base page styling */
