@@ -9,4 +9,5 @@ export interface NavLink {
   id: NavLinkId;
   label: string;
   href: string;
+  description?: string;
 }
