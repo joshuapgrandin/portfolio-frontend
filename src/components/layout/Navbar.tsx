@@ -22,7 +22,7 @@ const NavBar = ({ isMenuOpen, setIsMenuOpen }: NavBarProps) => {
   const [activeLink, setActiveLink] = useState<NavLinkId>("overview");
 
   return (
-    <header className="bg-bg-2 border-line w-full border-b">
+    <div className="bg-bg-2 border-line w-full border-b">
       <nav className="mx-auto flex h-18 max-w-600 items-center justify-between px-6">
         <div className="flex items-center gap-6 p-6">
           <Logo />
@@ -37,12 +37,12 @@ const NavBar = ({ isMenuOpen, setIsMenuOpen }: NavBarProps) => {
           onLinkClick={setActiveLink}
         />
         <div className="nav:flex hidden items-center gap-4">
-          <p className="text-ink-dim text-sm">Region: eu-west-2</p>
+          <p className="text-ink-dim text-sm">region: eu-west-2</p>
           <StatusTab status="live" />
         </div>
         <HamBurger onClick={() => setIsMenuOpen(!isMenuOpen)} />
       </nav>
-    </header>
+    </div>
   );
 };
 

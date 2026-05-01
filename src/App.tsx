@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavBar from "./components/layout/Navbar";
 import MobileMenu from "./components/layout/MobileMenu";
+import Header from "./components/layout/Header";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,8 @@ function App() {
       <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {/* Mobile menu */}
       <MobileMenu isOpen={isMenuOpen} />
+      {/*HEADER*/}
+      <Header />
     </>
   );
 }
