@@ -1,9 +1,10 @@
 // src/pages/Overview.tsx
 import { useState } from "react";
-import PanelCard from "./PanelCard";
-import SystemTopology from "./SystemTopology";
-import { NODES, type Node } from "../../../types";
-import MetricsPanel from "./MetricsPanel";
+import PanelCard from "../sections/overview/PanelCard";
+import SystemTopology from "../sections/overview/SystemTopology";
+import { NODES, type Node } from "../../types";
+import MetricsPanel from "../sections/overview/metrics/MetricsPanel";
+import NodeInspector from "../sections/overview/nodeinspector/NodeInspector";
 
 const Overview = () => {
   const [selectedNode, setSelectedNode] = useState<Node | null>(
@@ -41,7 +42,7 @@ const Overview = () => {
       </PanelCard>
 
       <PanelCard title="Node Inspector" meta={selectedNode?.id ?? "—"}>
-        {/* node inspector here */}
+        <NodeInspector selectedNode={selectedNode} />
       </PanelCard>
     </div>
   );

@@ -15,7 +15,7 @@ const PanelCard = ({
 }: PanelCardProps) => {
   return (
     <div
-      className={`bg-bg border-line flex h-full flex-col border ${className}`}
+      className={`bg-bg border-line flex h-full flex-col border p-2 ${className}`}
     >
       <div className="border-line flex shrink-0 items-center justify-between border-b border-dashed px-6 py-3">
         <p className="text-ink-dim text-xs tracking-wider">

@@ -29,7 +29,7 @@ const SystemTopology = ({ onNodeSelect }: SystemTopologyProps) => {
       {EDGES.map((edge) => {
         const from = findNode(edge.from);
         const to = findNode(edge.to);
-        if (!from || !to) return null; // TS narrowing in action
+        if (!from || !to) return null;
 
         // Connect bottom-center of `from` to top-center of `to`.
         // Works for the layered top-to-bottom layout we're using.

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { STREAM_DATA } from "../../../types/stream";
+import { STREAM_DATA } from "../../../../types/stream";
 
 const requestColour = {
   GET: "text-blue-300",
@@ -37,7 +37,15 @@ const RequestStreamCard = () => {
     <div className="bg-bg-1 border-line h-60 overflow-hidden border">
       <div className="border-line flex items-center justify-between border-b p-4 text-xs">
         <p className="text-ink-faint">REQUEST STREAM</p>
-        <p className="text-accent animate-pulse">STREAMING</p>
+        <div className="flex items-center gap-2">
+          <div className="relative">
+            <div
+              className={`animate-ping-ring bg-accent absolute inset-0 h-2 w-2 rounded-full`}
+            ></div>
+            <div className={`bg-accent h-2 w-2 rounded-full`}></div>
+          </div>
+          <p className="text-accent">STREAMING</p>
+        </div>
       </div>
       <div className="flex flex-col gap-2 overflow-clip p-2">
         {visible.map((data, index) => (

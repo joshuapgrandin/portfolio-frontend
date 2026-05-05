@@ -21,7 +21,7 @@ const RequestsCard = () => {
 
   return (
     <MetricCard title="REQUESTS / SEC">
-      <p className="text-accent mt-2 text-4xl">{requests}</p>
+      <p className="text-accent pt-2 text-4xl">{requests}</p>
       <p className="text-accent-2 mt-2 text-xs">▲ 12% vs avg</p>
     </MetricCard>
   );
