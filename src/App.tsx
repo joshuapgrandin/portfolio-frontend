@@ -3,6 +3,7 @@ import NavBar from "./components/layout/Navbar";
 import MobileMenu from "./components/layout/MobileMenu";
 import Header from "./components/layout/Header";
 import Overview from "./components/layout/Overview";
+import Projects from "./components/layout/Projects";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +18,8 @@ function App() {
       <Header />
       {/*OVERVIEW SECTION*/}
       <Overview />
+      {/*PROJECT SECTION */}
+      <Projects />
     </>
   );
 }
