@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ projects }: ProjectCardProps) => {
   return (
-    <div className="border-line bg-bg-1 group hover:border-line-bright relative m-6 border transition-colors duration-200">
+    <div className="border-line bg-bg-1 group hover:border-line-bright relative m-6 border transition-colors duration-200 hover:cursor-pointer">
       {/* Thumbnail */}
       <div className="border-line-bright h-40 w-full overflow-hidden border-b">
         {projects.thumbnailUrl ? (
@@ -79,8 +79,7 @@ const ProjectCard = ({ projects }: ProjectCardProps) => {
           </div>
         </div>
 
-        {/* Description */}
-        <p className="text-ink-dim mb-6 line-clamp-2 font-mono text-xs leading-relaxed">
+        <p className="text-ink-dim mb-6 font-mono text-xs leading-relaxed">
           {projects.description}
         </p>
 
