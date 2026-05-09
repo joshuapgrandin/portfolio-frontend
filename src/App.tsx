@@ -4,6 +4,7 @@ import MobileMenu from "./components/layout/MobileMenu";
 import Header from "./components/layout/Header";
 import Overview from "./components/layout/Overview";
 import Projects from "./components/layout/Projects";
+import Footer from "./components/sections/footer/Footer";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,6 +21,8 @@ function App() {
       <Overview />
       {/*PROJECT SECTION */}
       <Projects />
+      {/*FOOTER */}
+      <Footer />
     </>
   );
 }
